@@ -2,6 +2,7 @@
 
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+  background-attachment: fixed
 }
 
 .container {
@@ -72,6 +73,7 @@
 }
 
 .header__container {
+  min-block-size: 100vh;
   position: relative;
   display: grid;
   grid-template-areas:
@@ -138,7 +140,6 @@
 }
 
 .header__theme-menu-button {
-  border: none;
   border: 1px solid transparent;
   border-block-end: 1px solid transparent;
   padding-inline-start: 13px;
@@ -232,6 +233,10 @@
   gap: 20px;
 }
 
+.recomendations__item-title {
+  margin-block-end: 20px;
+}
+
 /* images */
 
 .images__container {
@@ -298,6 +303,7 @@
 
 .footer__container {
   position: relative;
+  min-block-size: 100vh;
 }
 
 .footer__title {
