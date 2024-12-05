@@ -5,11 +5,11 @@
 }
 
 .container {
-  max-inline-size: 1024px;
   margin: 0 auto;
   padding-inline-start: 10px;
   padding-inline-end: 10px;
   padding-block-start: 50px;
+  max-inline-size: 1024px;
 }
 
 .link {
@@ -17,35 +17,35 @@
 }
 
 .title-decor {
-  background-color: var(--background-color);
   color: var(--main-text-color);
+  background-color: var(--background-color);
 }
 
 /* section - одинаковые стили для всех секций */
 
 .section__title {
-  color: var(--section-title-color);
   padding-bottom: 20px;
+  color: var(--section-title-color);
   font-weight: var(--main-title-weight);
   font-size: var(--regular-size);
 }
 
 .section__item-title {
   color: var(--sub-title-color);
-  background-color: var(--accent-color);
+  font-weight: 700;
   font-size: 18px;
   line-height: 23.4px;
   letter-spacing: -0.8px;
-  font-weight: 700;
+  background-color: var(--accent-color);
 }
 
 .section__item-subtitle {
   color: var(--sub-title-color);
-  background-color: var(--accent-color);
+  font-weight: 500;
   font-size: 18px;
   line-height: 23.4px;
   letter-spacing: -0.8px;
-  font-weight: 500;
+  background-color: var(--accent-color);
 }
 
 .section__list {
@@ -64,45 +64,46 @@
 /* header */
 
 .header {
+  color: var(--dark-color);
   background-image: var(--header-background-image);
   background-repeat: no-repeat;
-  background-size: cover;
   background-position: center;
-  color: var(--dark-color);
+  background-size: cover;
 }
 
 .header__container {
   position: relative;
-  padding-block-end: 66px;
-  padding-block-start: clamp(75px, 20vw, 192px);
   display: grid;
   grid-template-areas:
     "nav"
     "title"
     "paragraph";
+  padding-block-start: clamp(75px, 20vw, 192px);
+  padding-block-end: 66px;
 }
 
 .header__container::before {
-  width: 25.04px;
-  height: 25px;
+  content: url(../images/angle-right.svg);
   position: absolute;
   top: 10px;
   right: 10px;
-  content: url(../images/angle-right.svg);
+  width: 25.04px;
+  height: 25px;
 }
 
 .header__container::after {
-  width: 25.04px;
-  height: 25px;
+  content: url(../images/angle-left.svg);
   position: absolute;
   bottom: 10px;
   left: 10px;
-  content: url(../images/angle-left.svg);
+  width: 25.04px;
+  height: 25px;
 }
 
 .header__theme-menu {
   grid-area: nav;
   justify-self: end;
+  align-self: end;
 }
 
 .header__title {
@@ -110,28 +111,24 @@
   padding-block-start: 17.318vw;
   padding-block-end: 14.6536vw;
   color: var(--main-title-color);
-  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   font-weight: bold;
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   line-height: 82.5%;
   letter-spacing: 10%;
   text-shadow: 4px 4px 0 var(--accent-color);
 }
 
 .header__text {
-  color: var(--sub-title-color);
-  background-color: var(--accent-color);
-  font-weight: bold;
   grid-area: paragraph;
   justify-self: end;
+  color: var(--sub-title-color);
+  font-weight: bold;
+  line-height: 130%;
+  background-color: var(--accent-color);
   min-inline-size: 355px;
   inline-size: 47.67vw;
   max-inline-size: 491px;
-  line-height: 130%;
   block-size: 117px;
-}
-
-.header__theme-menu {
-  align-self: end;
 }
 
 .header__theme-menu-list {
@@ -141,24 +138,24 @@
 }
 
 .header__theme-menu-button {
-  font-size: 18px;
-  font-weight: normal;
-  color: var(--button-color);
-  text-transform: lowercase;
-  cursor: pointer;
   border: none;
-  background: none;
-  padding-block-start: 0px;
-  padding-block-end: 2px;
+  border: 1px solid transparent;
+  border-block-end: 1px solid transparent;
   padding-inline-start: 13px;
   padding-inline-end: 13px;
-  border-block-end: 1px solid transparent;
-  border: 1px solid transparent;
+  padding-block-start: 0px;
+  padding-block-end: 2px;
+  color: var(--button-color);
+  font-weight: normal;
+  font-size: 18px;
+  text-transform: lowercase;
+  background: none;
+  cursor: pointer;
 }
 
 .header__theme-menu-button_active {
   border: 1px solid var(--button-color);
-  pointer-events: none
+  pointer-events: none;
 }
 
 
@@ -167,40 +164,39 @@
 }
 
 .header__theme-menu-button:focus-visible {
-  outline: none;
   border: none;
   border-block-end: 1px solid var(--button-border-focus);
+  outline: none;
 }
 
 .header__theme-menu-button_type_auto:focus-visible {
-  outline: none;
   border-block-end: 1px solid var(--button-border-hover);
+  outline: none;
 }
 
 
 
 .header__decorative-element {
-  display: none;
   position: absolute;
+  top: 10px;
+  right: 35px;
+  display: none;
   width: 33px;
   height: 26px;
-  right: 35px;
-  top: 10px;
   background-image: url(../images/header__decorative-element.svg);
-  background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+  background-size: contain;
 }
 
 .header__decorative-element::after {
-  position: absolute;
-  filter: blur(4);
-  filter: drop-shadow(0px 0px (#FF0070));
   content: url(../images/header__decorative-after-element.png);
+  position: absolute;
   top: 2.5px;
-  left: 35px;
+  left: 34px;
   object-fit: cover;
   object-position: center;
+  filter: drop-shadow(0px 0px (#FF0070));
 }
 
 /* why */
@@ -250,20 +246,20 @@
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   grid-template-rows: repeat(5, min-content);
-  gap: 10px;
   grid-template-areas:
     "sunset"
     "ice-cream"
     "tape"
     "books"
     "street";
+  gap: 10px;
 }
 
 .images__item-image {
-  inline-size: 100%;
-  block-size: 100%;
   object-fit: cover;
   object-position: center;
+  inline-size: 100%;
+  block-size: 100%;
 }
 
 .sunset__item {
@@ -306,12 +302,12 @@
 
 .footer__title {
   padding-block-start: 236px;
-  text-align: center;
   padding-block-end: 285px;
   color: var(--main-title-color);
-  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   font-weight: bold;
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   line-height: 82.5%;
+  text-align: center;
   text-shadow: 2px 2px 0 var(--accent-color);
 }
 
@@ -358,9 +354,9 @@
   }
 
   .header__title {
-    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
     padding-block-start: 22.526vw;
     padding-block-end: 21.0937vw;
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 
   .header__container::before {
@@ -374,17 +370,17 @@
   }
 
   .header__decorative-element {
+    top: 20px;
+    right: 48px;
     width: 33px;
     height: 26px;
-    right: 48px;
-    top: 20px;
   }
 
   .header__decorative-element::after {
-    width: 9px;
-    height: 9px;
     top: 2.5px;
     left: 35px;
+    width: 9px;
+    height: 9px;
   }
 
   .concentration__item {
@@ -403,8 +399,8 @@
   .recomendations__container {
     display: flex;
     flex-direction: row;
-    gap: 20px;
     align-items: start;
+    gap: 20px;
   }
 
   .concentration__title {
@@ -420,11 +416,11 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, min-content);
-    gap: 20px;
     grid-template-areas:
       "sunset sunset ice-cream"
       "tape books ice-cream"
       "tape street street";
+    gap: 20px;
   }
 
   .images__container {
@@ -460,9 +456,9 @@
   }
 
   .footer__title {
-    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
     padding-block-start: 383px;
     padding-block-end: 462px;
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 
   .footer__container::before {
@@ -488,9 +484,9 @@
   }
 
   .header__title {
-    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
     padding-block-start: 273px;
     padding-block-end: 114px;
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 
   .header__theme-menu {
@@ -552,8 +548,8 @@
   }
 
   .footer__title {
-    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
     padding-block-start: 239px;
     padding-block-end: 319px;
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 }

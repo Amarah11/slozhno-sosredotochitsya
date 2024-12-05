@@ -7,10 +7,10 @@
 }
 
 body {
+  margin: 0;
   font-family: 'IBM Plex mono', Arial, Helvetica, sans-serif;
   font-weight: var(--main-text-weight);
   font-size: 18px;
-  margin: 0;
 }
 
 h1,

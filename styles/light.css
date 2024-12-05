@@ -16,7 +16,7 @@
 }
 
 
-:root .theme_light{
+:root .theme_light {
   --accent-color: #ff8dcb;
   --header-background-image: url("../images/cover-image-light.png");
   --background-color: #FFF1F7;
