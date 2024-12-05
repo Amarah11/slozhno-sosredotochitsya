@@ -10,3 +10,78 @@
     чем стили в медиазапросе предпочтений пользователя
   */
 }
+
+.theme_dark .header__decorative-element {
+  display: block;
+}
+
+:root .theme_dark {
+  --header-background-image: url("../images/cover-image-dark.png");
+  --background-color: #000028;
+  --main-title-color: #DB00FF;
+  --accent-color: #ff0070;
+  --section-title-color: #ff0070;
+  --angle-color: #ff0070;
+  --main-text-weight: normal;
+  --sub-title-color: #000028;
+  --main-text-color: #F1B2CE;
+  --main-title-weight: bold;
+  --objects-display: block;
+  --button-color: #ff0070;
+  --button-border-focus: #ff0070;
+  --button-border-hover: rgba(255, 0, 112, 0.4);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --header-background-image: url("../images/cover-image-dark.png");
+    --background-color: #000028;
+    --main-title-color: #DB00FF;
+    --accent-color: #ff0070;
+    --section-title-color: #ff0070;
+    --angle-color: #ff0070;
+    --main-text-weight: normal;
+    --sub-title-color: #000028;
+    --main-text-color: #F1B2CE;
+    --main-title-weight: bold;
+    --objects-display: block;
+    --button-color: #ff0070;
+    --button-border-focus: #ff0070;
+    --button-border-hover: rgba(255, 0, 112, 0.4);
+  }
+
+  .header__decorative-element {
+    display: block;
+  }
+
+  .header__container::before {
+    content: url(../images/angle-right.svg);
+  }
+  
+  .header__container::after {
+    content: url(../images/angle-left.svg);
+  }
+
+  .footer__container::before {
+    content: url(/images/angle-right.svg);
+  }
+  
+  .footer__container::after {
+    content: url(/images/angle-left.svg);
+  }
+}
+
+.theme_dark .header__container::before {
+  content: url(../images/angle-right.svg);
+}
+
+.theme_dark .header__container::after {
+  content: url(../images/angle-left.svg);
+}
+
+.theme_dark .footer__container::before {
+  content: url(/images/angle-right.svg);
+}
+
+.theme_dark .footer__container::after {
+  content: url(/images/angle-left.svg);
+}

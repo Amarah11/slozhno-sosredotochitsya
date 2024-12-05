@@ -10,3 +10,80 @@
     чем стили в медиазапросе предпочтений пользователя
   */
 }
+
+.theme_light .header__decorative-element {
+  display: none;
+}
+
+
+:root .theme_light{
+  --accent-color: #ff8dcb;
+  --header-background-image: url("../images/cover-image-light.png");
+  --background-color: #FFF1F7;
+  --main-title-color: #FFC2E6;
+  --angle-color: #353430;
+  --section-title-color: #353430;
+  --sub-title-color: #353430;
+  --main-text-weight: normal;
+  --main-title-weight: bold;
+  --objects-display: block;
+  --main-text-color: #353430;
+  --button-color: #000028;
+  --button-border-focus: #353430;
+  --button-border-hover: rgba(50, 49, 45, 0.4);
+  }
+
+  @media (prefers-color-scheme: light) {
+    :root {
+      --accent-color: #ff8dcb;
+      --header-background-image: url("../images/cover-image-light.png");
+      --background-color: #FFF1F7;
+      --main-title-color: #FFC2E6;
+      --angle-color: #353430;
+      --section-title-color: #353430;
+      --sub-title-color: #353430;
+      --main-text-weight: normal;
+      --main-title-weight: bold;
+      --objects-display: block;
+      --main-text-color: #353430;
+      --button-color: #000028;
+      --button-border-color: #353430;
+      --button-border-focus: #353430;
+      --button-border-hover: rgba(50, 49, 45, 0.4);
+    }
+
+    .header__container::before {
+      content: url(../images/angle-right-light.svg);
+    }
+    
+    .header__container::after {
+      content: url(../images/angle-left-light.svg);
+    }
+  
+    .footer__container::before {
+      content: url(/images/angle-right-light.svg);
+    }
+    
+    .footer__container::after {
+      content: url(/images/angle-left-light.svg
+      );
+    }
+  }
+
+  .theme_light .header__container::before {
+    content: url(../images/angle-right-light.svg);
+  }
+  
+  .theme_light .header__container::after {
+    content: url(../images/angle-left-light.svg);
+  }
+
+  .theme_light .footer__container::before {
+    content: url(/images/angle-right-light.svg);
+  }
+  
+  .theme_light .footer__container::after {
+    content: url(/images/angle-left-light.svg
+    );
+  }
+  
