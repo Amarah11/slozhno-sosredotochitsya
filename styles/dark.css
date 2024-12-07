@@ -62,11 +62,11 @@
     content: url(../images/angle-left.svg);
   }
 
-  .footer__container::before {
+  .footer::before {
     content: url(/images/angle-right.svg);
   }
 
-  .footer__container::after {
+  .footer::after {
     content: url(/images/angle-left.svg);
   }
 }
@@ -79,10 +79,10 @@
   content: url(../images/angle-left.svg);
 }
 
-.theme_dark .footer__container::before {
+.theme_dark .footer::before {
   content: url(/images/angle-right.svg);
 }
 
-.theme_dark .footer__container::after {
+.theme_dark .footer::after {
   content: url(/images/angle-left.svg);
 }

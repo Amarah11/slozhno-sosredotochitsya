@@ -59,11 +59,11 @@
     content: url(../images/angle-left-light.svg);
   }
 
-  .footer__container::before {
+  .footer::before {
     content: url(/images/angle-right-light.svg);
   }
 
-  .footer__container::after {
+  .footer::after {
     content: url(/images/angle-left-light.svg);
   }
 }
@@ -76,10 +76,10 @@
   content: url(../images/angle-left-light.svg);
 }
 
-.theme_light .footer__container::before {
+.theme_light .footer::before {
   content: url(/images/angle-right-light.svg);
 }
 
-.theme_light .footer__container::after {
+.theme_light .footer::after {
   content: url(/images/angle-left-light.svg);
 }
